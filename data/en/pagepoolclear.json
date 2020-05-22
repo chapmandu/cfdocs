@@ -4,10 +4,10 @@
 	"syntax": "pagePoolClear()",
 	"returns": "boolean",
 	"related": [],
-	"description": "",
+	"description": "clear pages in pools",
 	"params": [],
 	"engines": {
-		"lucee": {"minimum_version": "", "notes": "", "docs": "http://docs.lucee.org/reference/functions/pagepoolclear.html"}
+		"lucee": {"minimum_version": "", "notes": "", "docs": "https://docs.lucee.org/reference/functions/pagepoolclear.html"}
 	},
 	"examples": [],
 	"links": []

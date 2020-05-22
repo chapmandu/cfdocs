@@ -60,6 +60,8 @@ Specifies the data source that should be used by ORM. If it is not specified her
 
 ### `string DBCreate`
 
+Default: `none`
+
 ColdFusion ORM can automatically create the tables for your application in the database when ORM is initialized for the application. This can be enabled by using this setting. It takes the following values:
 
 * `dropcreate` Drops and recreates every table specified in the ORM. Does not drop other existing tables.
@@ -109,7 +111,7 @@ Specifies whether the SQL queries that are executed by ORM will be logged. When 
 Defines database standard and naming convention.
 
 * default: This strategy uses the logical table or column name as it is.
-* smart: This strategy changes the logical table or column name to uppercase. Also, if the logical table or column name is in camel case, this strategy breaks the camelcased name and separates the broken words using underscore. For example, for a CFC named "OrderProduct", this strategy changes the table name as "ORDER_PRODUCT".
+* smart: This strategy changes the logical table or column name to uppercase. Also, if the logical table or column name is in camel case, this strategy breaks the camel cased name and separates the broken words using underscore. For example, for a CFC named "OrderProduct", this strategy changes the table name as "ORDER_PRODUCT".
 * your own cfc : You can get complete control of the naming strategy by providing your own implementation. You need to specify the fully qualified name of the CFC as the value for naming strategy. This CFC must implement cfide.orm.INamingStrategy interface.
 
 ### `string ORMConfig`

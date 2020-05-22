@@ -16,9 +16,11 @@ Entire books have been written about server security and will generally include 
 
 [ColdFusion 2016 Lockdown Guide (PDF)](http://adobe.ly/1ZIK4zi)
 
+[ColdFusion 2018 Lockdown Guide (PDF)](https://www.adobe.com/content/dam/acom/en/products/coldfusion/pdfs/coldfusion-2018-lockdown-guide.pdf)
+
 There has been some attempt made at putting together a Lucee lockdown guide, but it is incomplete. A Google search for 'Lucee lockdown guide' provides useful links to blog posts and the following start to a guide:
 
-[Lucee Lockdown Guide (HTML)](http://bit.ly/1OebHiz)
+[Lucee Lockdown Guide (HTML)](http://bit.ly/2imMVTF)
 
 These lockdown guides will give you an excellent head start on protecting your servers, your application servers and your network, and those tasks while not (yet) explicitly called out in Lucee documentation, certainly all apply to Lucee equally. I suggest using the most recent Adobe lockdown guide as your basis for what to also apply to your Lucee servers, Adobe specific nuances aside, of course.
 
@@ -62,7 +64,7 @@ The [Online Web Application Security Project](http://bit.ly/1devYyR) is the go-t
 
 Obfuscation is the art of hiding things in plain sight, and using obfuscation in our application designs can significantly improve application security.
 
-[Click Here](/security-obfuscation) to learn how obscuring data will help protect you from paramter tampering.
+[Click Here](/security-obfuscation) to learn how obscuring data will help protect you from parameter tampering.
 
 ### Encryption
 

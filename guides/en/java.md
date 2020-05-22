@@ -4,7 +4,7 @@ Since ColdFusion 6, Java has been core to the CFML language. Your CFML code get 
 
 ## Using Java in CFML
 
-The Java Platform has several builtin classes that you can make use of in CFML (similar to how CFML has several builtin Functions and Tags that you can leverage). You can find detailed documentation of the Java Platform API [here](http://docs.oracle.com/javase/8/docs/api/index.html), there is quite a bit of useful API at your disposal.
+The Java Platform has several built-in classes that you can make use of in CFML (similar to how CFML has several built-in Functions and Tags that you can leverage). You can find detailed documentation of the Java Platform API [here](http://docs.oracle.com/javase/8/docs/api/index.html), there is quite a bit of useful API at your disposal.
 
 #### Using a Constructor
 
@@ -32,6 +32,23 @@ Often when you have an API to interact with you can look through the Java API do
 
 	runtime = createObject("java", "java.lang.Runtime").getRuntime();
 	writeOutput( runtime.availableProcessors() );
+
+#### Converting Java Code Examples to CFML 
+
+Ok, let's suppose you have a java library that you want to use in CFML. You have a code example showing how to use the library in java that looks like this:
+
+	Car myCar = CarFactory.create();
+	myCar.setDriver( new Driver("Pete") );
+	Driver myDriver = myCar.getDriver();
+	myDriver.eject();
+
+Often times code examples leave off the package names and only use class names, you will need the full package name of the class. Here's a hint: look for an `import` statement in a full code example, you might see `import com.example.cars.CarFactory;` or perhaps `import com.example.cars.*;` in the code example. If all else fails rename the jar file as a zip and extract it and use the folder names pointing to the class you want to use.
+
+Now to write the example in CFML. On the first line, we can assume that the `create()` method in the `CarFactory` class is a `static` method. The difference between a `static` method and a regular instance method is very important to understand. A `static` method can be called without an _instance_ of the class. All `static` methods are marked as such.  
+
+#### All I have are Java Docs, how do I get started?
+	
+A good way to start is to look for `static` methods that you can invoke. If there are too many classes start by looking for a class with _Factory_ in the name, the _Abstract Class Factory Pattern_ is popular entry point to java APIs.  
 
 #### Type Casting 
 
